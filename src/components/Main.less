@@ -1,0 +1,31 @@
+/* Base Application Styles */
+body {
+  color: #696969;
+  background: #222;
+}
+h1 {
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.main-content {
+  margin-top: 80px;
+  background: #eaeaea;
+  border: 2px solid rgba(0, 0, 0, .2);
+
+  .editor {
+    height: 300px;
+    padding: 0;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    color: #222;
+    background: #fff;
+
+    .ql-toolbar {
+      box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    }
+
+    .ql-container {
+      height: calc(~"100% - 50px"); // account for toolbar height
+    }
+  }
+}

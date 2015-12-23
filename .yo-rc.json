@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "quill",
+    "style": "less",
+    "postcss": true
+  }
+}
