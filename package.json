@@ -6,8 +6,9 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
-    "dist": "npm run copy & webpack --env=dist",
-    "serve:dist": "node server.js --env=dist",
+    "prebuild": "npm run clean",
+    "build": "npm run copy & webpack --env=dist",
+    "dist": "npm run build && node server.js",
     "start": "nodemon server.dev.js --env=dev",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
