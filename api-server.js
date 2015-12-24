@@ -21,11 +21,19 @@ function config(app) {
             function (err, info) {
                 if (err) {
                     console.error('[EMAIL] error:', err);
-                    return res.send({error: err});
+                    return res
+                        .status(409)
+                        .send({
+                            error: err.toString(),
+                            details: err.errors[0]
+                        });
                 }
 
-                console.log('[EMAIL] Sent:', info);
-                res.send({ result: 'ok'});
+                console.log('[EMAIL] Sent:', info.accepted);
+                res.send({
+                    result: 'ok',
+                    details: {accepted: info.accepted}
+                });
             });
     });
 }

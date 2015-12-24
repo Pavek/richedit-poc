@@ -8,7 +8,8 @@ h1 {
 }
 
 .main-content {
-  margin-top: 80px;
+  padding: 15px;
+  margin-top: 10%;
   background: #eaeaea;
   border: 2px solid rgba(0, 0, 0, .2);
 
@@ -27,5 +28,25 @@ h1 {
     .ql-container {
       height: calc(~"100% - 50px"); // account for toolbar height
     }
+  }
+
+  .alert {
+    padding: 10px 35px 10px 10px;
+    .details {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+.details-tooltip {
+  .tooltip-inner {
+    max-width: 400px;
+    text-align: left;
+  }
+  pre {
+    background: transparent;
+    color: #ddd;
+    border: 0;
   }
 }

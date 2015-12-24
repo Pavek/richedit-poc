@@ -5,7 +5,7 @@ var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 var open = require('open');
 
-var api = require('./api-server').run(3000);
+var api = require('./api-server').run(null, 3000);
 var server = new WebpackDevServer(webpack(config), config.devServer);
 
 server.listen(config.port, 'localhost', function (err) {
