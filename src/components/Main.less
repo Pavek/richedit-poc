@@ -14,7 +14,7 @@ h1 {
   border: 2px solid rgba(0, 0, 0, .2);
 
   .editor {
-    height: 300px;
+    min-height: 250px;
     padding: 0;
     margin-bottom: 15px;
     border-radius: 4px;
@@ -49,4 +49,32 @@ h1 {
     color: #ddd;
     border: 0;
   }
+}
+
+.select-lib {
+  label {
+    text-align: left !important;
+  }
+  .li {
+    padding: 0 7px 0 6px;
+    border-left: 1px solid #696969;
+    &:nth-of-type(1) {
+      padding-left: 0;
+      border-left: 0;
+    }
+    color: #0066cc;
+    cursor: pointer;
+    &:hover:not(.selected) {
+      text-decoration: underline;
+    }
+
+    &.selected {
+      color: #444;
+      cursor: inherit;
+    }
+  }
+}
+
+.mce-panel {
+  margin-bottom: 15px;
 }
